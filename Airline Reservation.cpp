@@ -5,6 +5,7 @@
 #include <windows.h> //SetConsoleCursorPosition, SetConsoleCursor, gotoxy,GetAsyncKeyState
 #include <sstream> // stringstream
 #include <string>
+#pragma warning(disable: 4996)
 
 using namespace std;
 
@@ -54,8 +55,8 @@ bool alpha(string name) { //function to check a string if it contains characters
 int main() {
 	string  date = "", surname[11], frstname[11], mi[11], pssngrs, type1, destination1, schedule, plane1, payment, selection, availInsurance, age_str, baggage_str, logo = "\t\t\t\t\t  \xc9\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xbb\n\t\t\t\t\t  \xba     \xdb   \xdb \xdb\xdf\xdf\xdf \xdb\xdf\xdf\xdc \xdb\xdf\xdf\xdb      \xba\n   \t\t\t\t\t  \xba     \xdb\xdb \xdb\xdb \xdb\xfe\xfe  \xdb\xdc\xdc\xdf \xdb\t  \xba\n   \t\t\t\t\t  \xba     \xdb \xdb \xdb \xdb\xdc\xdc\xdc \xdb  \xdb \xdb\xdc\xdc\xdb      \xba\n \t\t\t\t\t  \xba A    I    R    L    I    N   E\xba\n\t\t\t\t\t  \xba     R E S E R V A T I O N S   \xba\n\t\t\t\t\t  \xc8\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xbc";
 	int pssngr, x, ctr1, ctr2, ctr3, group, hr, hr2, conv, young[11], senior[11], age[11], index1 = 1, index2 = 1, index3 = 1; char yn = 'x', type[10000], sched[10000], destination[10000], plane[10000], insurance1[10000], type2, sched2;
-	int excessBaggage[11], year, year1, month1, day1, seniors, child, month, day, is_num = 0, decimal_count = 0; double disc, pssngr_fee[11], insurance[11], trip_fare, baggage[11], BaggageFee[11];
-	double amount, vat, gross, gross2, change, cash;
+	int excessBaggage[11], year, year1, month1, day1, seniors, child = 0, month, day, is_num = 0, decimal_count = 0; double disc, pssngr_fee[11], insurance[11], trip_fare, baggage[11], BaggageFee[11];
+	double amount, vat, gross = 0, gross2, change, cash;
 	bool is_num_bool = 0, contains_spaces = false, running = true;
 	time_t t = time(0);
 
