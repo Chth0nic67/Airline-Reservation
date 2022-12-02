@@ -165,33 +165,7 @@ int main() {
 		type1 = "Round Trip";
 		type2 = '2';
 	}
-	system("cls");
-	cout << logo;
-	//prints out choices for type of airplane
-	cout << "\n\n\n\n\t\t\t\t  " << char(201);  for (int i = 0; i < 47; i++) { cout << char(205); }  cout << char(187) << endl;
-	cout << "\t\t\t\t  " << char(186) << "                                               " << char(186) << endl;
-	cout << "\t\t\t\t  " << char(186); Color(240); cout << "     What Type of Luxury of Airplane(1-2):     "; Color(241); cout << char(186) << endl;
-	cout << "\t\t\t\t  " << char(186) << "                                               " << char(186) << endl;
-	cout << "\t\t\t\t  " << char(204);  for (int i = 0; i < 23; i++) { cout << char(205); }  cout << char(203);  for (int i = 0; i < 23; i++) { cout << char(205); }  cout << char(185) << endl;
-	cout << "\t\t\t\t  " << char(186) << "\t\t\t  " << char(186) << "\t\t\t  " << char(186) << endl;
-	cout << "\t\t\t\t  " << char(186); Color(240); cout << " (1) Private Jet Class "; Color(241); cout << char(186); Color(240); cout << " (2)Business Jet Class "; Color(241); cout << char(186) << endl;
-	cout << "\t\t\t\t  " << char(186) << "\t\t\t  " << char(186) << "\t\t\t  " << char(186) << endl;
-	cout << "\t\t\t\t  " << char(200);  for (int i = 0; i < 23; i++) { cout << char(205); }  cout << char(202);  for (int i = 0; i < 23; i++) { cout << char(205); }  cout << char(188) << endl;
-	gotoxy(78, 12);
-	cin >> plane;
-	while (plane[0] != '2' && plane[0] != '1' || plane[1] > 0) { //input validation
-		gotoxy(1, 12);
-		cout << "\t\t\t\t  " << char(186); Color(240); cout << "   INVALID INPUT, RE-ENTER TYPE OF AIRPLANE:   "; Color(241); cout << char(186) << endl;
-		gotoxy(80, 12);
-		plane[0] = 0;
-		cin >> plane;
-	}
-	if (plane[0] == '1') {
-		plane1 = "Private Jet Class";
-	}
-	else {
-		plane1 = "Business Jet Class";
-	}
+
 	system("cls");
 	cout << logo;
 	//prints all of available trip destinations
