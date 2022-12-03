@@ -76,6 +76,7 @@ int main() {
 	cout << "\t\t\t\t"; Color(241); cout << char(186) << "                 " << ">YES"; Color(240); cout << "       NO                     "; Color(241); cout << char(186) << endl;
 	yn = 'Y';
 	gotoxy(54, 14);
+
 	system("pause>nul");
 	while (running) { //run a loop with a bool as a condition
 
@@ -122,6 +123,7 @@ int main() {
 		cout << b;
 		for (int j = 0; j <= 3e7; j++);
 	}
+
 	system("cls");
 	cout << logo;
 	cout << "\n\n\t\t\t ";
@@ -180,18 +182,11 @@ int main() {
 	cout << "\t\t\t\t      " << char(186); Color(240); cout << "             (C) \xb3 Palawan              "; Color(241); cout << char(186) << endl;
 	cout << "\t\t\t\t      " << char(186); Color(240); cout << "             (D) \xb3 Davao                "; Color(241); cout << char(186) << endl;
 	cout << "\t\t\t\t      " << char(186) << "                                        " << char(186) << endl;
-	cout << "\t\t\t\t      " << char(186) << "\xb0\xb0\xb0\xb0\xb0\xb0\xb0\xb0 INTERNATIONAL FLIGHTS \xb0\xb0\xb0\xb0\xb0\xb0\xb0\xb0\xb0" << char(186) << endl;
-	cout << "\t\t\t\t      " << char(186) << "                                        " << char(186) << endl;
-	cout << "\t\t\t\t      " << char(186); Color(240); cout << "             (E) \xb3 Malaysia             "; Color(241); cout << char(186) << endl;
-	cout << "\t\t\t\t      " << char(186); Color(240); cout << "             (F) \xb3 Indonesia            "; Color(241); cout << char(186) << endl;
-	cout << "\t\t\t\t      " << char(186); Color(240); cout << "             (G) \xb3 Singapore            "; Color(241); cout << char(186) << endl;
-	cout << "\t\t\t\t      " << char(186); Color(240); cout << "             (H) \xb3 South Korea          "; Color(241); cout << char(186) << endl;
-	cout << "\t\t\t\t      " << char(186); Color(240); cout << "             (I) \xb3 Japan                "; Color(241); cout << char(186) << endl;
 	cout << "\t\t\t\t      " << char(204);  for (int i = 0; i < 40; i++) { cout << char(205); }  cout << char(185) << endl;
 	cout << "\t\t\t\t      " << char(186); Color(240); cout << "      Please Refer from the Above       "; Color(241); cout << char(186) << endl;
 	cout << "\t\t\t\t      " << char(186); Color(240); cout << " And Enter Desired Destination(A - I):  "; Color(241); cout << char(186) << endl;
 	cout << "\t\t\t\t      " << char(200);      for (int i = 0; i < 40; i++) { cout << char(205); }      cout << char(188) << endl;
-	gotoxy(77, 30);
+	gotoxy(77, 23);
 	cin >> destination;
 	while ((destination[0] > 'i' || destination[0] < 'a') && (destination[0] > 'I' || destination[0] < 'A') || (destination[1] > 0)) { //input validation
 		destination[1] = 0;
@@ -241,57 +236,8 @@ int main() {
 			trip_fare = 9230;
 		}
 		break;
-	case 'e': case 'E':
-		destination1 = "Malaysia";
-		selection = "I";
-		if (plane[0] == '1') {
-			trip_fare = 6199;
-		}
-		else {
-			trip_fare = 12150;
-		}
-		break;
-	case 'f': case 'F':
-		destination1 = "Indonesia";
-		selection = "I";
-		if (plane[0] == '1') {
-			trip_fare = 5699;
-		}
-		else {
-			trip_fare = 10850;
-		}
-		break;
-	case 'g': case 'G':
-		destination1 = "Singapore";
-		selection = "I";
-		if (plane[0] == '1') {
-			trip_fare = 6899;
-		}
-		else {
-			trip_fare = 13110;
-		}
-		break;
-	case 'h': case 'H':
-		destination1 = "South Korea";
-		selection = "I";
-		if (plane[0] == '1') {
-			trip_fare = 12500;
-		}
-		else {
-			trip_fare = 23850;
-		}
-		break;
-	case 'i': case 'I':
-		destination1 = "Japan";
-		selection = "I";
-		if (plane[0] == '1') {
-			trip_fare = 24800;
-		}
-		else {
-			trip_fare = 31450;
-		}
-		break;
 	}
+
 	system("cls");
 	cout << logo;
 	tm* now = localtime(&t); //get current time or date
@@ -1553,7 +1499,7 @@ int main() {
 		cout << "\t\t      " << char(186) << setw(75) << char(186) << endl;
 		cout << "\t\t      " << char(186); Color(240); cout << "                             <Y> <N>: "; Color(241); cout << setw(37) << char(186) << endl;
 		cout << "\t\t      " << char(200);      for (int i = 0; i < 74; i++) { cout << char(205); }      cout << char(188) << endl;
-		gotoxy(61, 28);
+		gotoxy(61, 27);
 		cin >> insurance1;
 		while (insurance1[0] != 'Y' && insurance1[0] != 'y' && insurance1[0] != 'N' && insurance1[0] != 'n' || insurance1[1] > 0) { //input validation
 			gotoxy(1, 27);
